@@ -51,7 +51,7 @@
   "book": {
     "1": {
       "info": {
-        "name": "1 Mosebok",
+        "name": "1. Mosebok",
         "shortname": "1Mos",
         "abbr": [],
         "desc": ""
@@ -59,7 +59,7 @@
     },
     "2": {
       "info": {
-        "name": "2 Mosebok",
+        "name": "2. Mosebok",
         "shortname": "2Mos",
         "abbr": [],
         "desc": ""
@@ -67,7 +67,7 @@
     },
     "3": {
       "info": {
-        "name": "3 Mosebok",
+        "name": "3. Mosebok",
         "shortname": "3Mos",
         "abbr": [],
         "desc": ""
@@ -75,7 +75,7 @@
     },
     "4": {
       "info": {
-        "name": "4 Mosebok",
+        "name": "4. Mosebok",
         "shortname": "4Mos",
         "abbr": [],
         "desc": ""
@@ -83,7 +83,7 @@
     },
     "5": {
       "info": {
-        "name": "5 Mosebok",
+        "name": "5. Mosebok",
         "shortname": "5Mos",
         "abbr": [],
         "desc": ""
@@ -115,7 +115,7 @@
     },
     "9": {
       "info": {
-        "name": "1 Samuel",
+        "name": "1. Samuel",
         "shortname": "1Sa",
         "abbr": [],
         "desc": ""
@@ -123,7 +123,7 @@
     },
     "10": {
       "info": {
-        "name": "2 Samuel",
+        "name": "2. Samuel",
         "shortname": "2Sa",
         "abbr": [],
         "desc": ""
@@ -131,7 +131,7 @@
     },
     "11": {
       "info": {
-        "name": "1 Kongebok",
+        "name": "1. Kongebok",
         "shortname": "1Ko",
         "abbr": [],
         "desc": ""
@@ -139,7 +139,7 @@
     },
     "12": {
       "info": {
-        "name": "2 Kongebok",
+        "name": "2. Kongebok",
         "shortname": "2Ko",
         "abbr": [],
         "desc": ""
@@ -147,7 +147,7 @@
     },
     "13": {
       "info": {
-        "name": "1 Krønikebok",
+        "name": "1. Krønikebok",
         "shortname": "1Kn",
         "abbr": [],
         "desc": ""
@@ -155,7 +155,7 @@
     },
     "14": {
       "info": {
-        "name": "2 Krønikebok",
+        "name": "2. Krønikebok",
         "shortname": "2Kn",
         "abbr": [],
         "desc": ""
@@ -203,7 +203,7 @@
     },
     "20": {
       "info": {
-        "name": "Salomos Ordspråk",
+        "name": "Ordspråk",
         "shortname": "Sao",
         "abbr": [],
         "desc": ""
@@ -411,7 +411,7 @@
     },
     "46": {
       "info": {
-        "name": "1 Korinter",
+        "name": "1. Korinter",
         "shortname": "1Kr",
         "abbr": [],
         "desc": ""
@@ -419,7 +419,7 @@
     },
     "47": {
       "info": {
-        "name": "2 Korinter",
+        "name": "2. Korinter",
         "shortname": "2Kr",
         "abbr": [],
         "desc": ""
@@ -459,7 +459,7 @@
     },
     "52": {
       "info": {
-        "name": "1 Tessaloniker",
+        "name": "1. Tessaloniker",
         "shortname": "1Te",
         "abbr": [],
         "desc": ""
@@ -467,7 +467,7 @@
     },
     "53": {
       "info": {
-        "name": "2 Tessaloniker",
+        "name": "2. Tessaloniker",
         "shortname": "2Te",
         "abbr": [],
         "desc": ""
@@ -475,7 +475,7 @@
     },
     "54": {
       "info": {
-        "name": "1 Timoteus",
+        "name": "1. Timoteus",
         "shortname": "1Ti",
         "abbr": [],
         "desc": ""
@@ -483,7 +483,7 @@
     },
     "55": {
       "info": {
-        "name": "2 Timoteus",
+        "name": "2. Timoteus",
         "shortname": "2Ti",
         "abbr": [],
         "desc": ""
@@ -523,7 +523,7 @@
     },
     "60": {
       "info": {
-        "name": "1 Peter",
+        "name": "1. Peter",
         "shortname": "1Pe",
         "abbr": [],
         "desc": ""
@@ -531,7 +531,7 @@
     },
     "61": {
       "info": {
-        "name": "2 Peter",
+        "name": "2. Peter",
         "shortname": "2Pe",
         "abbr": [],
         "desc": ""
@@ -539,7 +539,7 @@
     },
     "62": {
       "info": {
-        "name": "1 Johannes",
+        "name": "1. Johannes",
         "shortname": "1Jo",
         "abbr": [],
         "desc": ""
@@ -547,7 +547,7 @@
     },
     "63": {
       "info": {
-        "name": "2 Johannes",
+        "name": "2. Johannes",
         "shortname": "2Jo",
         "abbr": [],
         "desc": ""
@@ -555,7 +555,7 @@
     },
     "64": {
       "info": {
-        "name": "3 Johannes",
+        "name": "3. Johannes",
         "shortname": "3Jo",
         "abbr": [],
         "desc": ""
