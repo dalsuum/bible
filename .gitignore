@@ -1,4 +1,5 @@
 *.v[0-9]*.*
+tmp.*
 *tmp/
 /static
 /cache

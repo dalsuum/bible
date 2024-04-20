@@ -2,6 +2,12 @@
 
 ...the Holy Bible in languages!
 
+At times, we've misplaced or locked our understanding of belief on preachers, scholars, or Sunday services by individuals. While the preaching or the scripture interpretation may differ from one to another, you ought to go beyond for the why and how our belief has been founded. It's in our human nature that we want to have a base of knowledge to conclude what we do, why we are doing it, and how it's supposed to be. Well, in Christianity, there is no other way but through the Holy Bible. There we shall learn.
+
+In truth, your earthly body belongs to your desires, but your earthly desires are boundless and shall not cease wanting more unless you practice the true path. Yes, it's possible to inherit earthly blessings and also inherit the eternal kingdom. It's only you who can choose for yourself.
+
+This test of knowledge imports no ideologies nor doctrines, which is one of the main reasons for the deviation of churches.
+
 ```bash
 Let there be light
 Khuavak om hen
@@ -22,65 +28,66 @@ haven`t, doesn`t
 ÆØÅ,æøå
 ```
 
-| Name | Language | ISO |
-| --- | --- | --- |
-| Baibal Thianghlim (Falam) | Falam, Lai, Chin | cfm |
-| Baibal Thiang (Hakha) | Hakha, Lai, Chin | cnh |
-| Pathian Lehkhabu Thianghlim (Mizo) | Mizo, Lushai, Chin | lus |
-| Common Language Bible (Mizo) | Mizo, Lushai | lus |
-| Paite Bible (Paite) | Paite, Zolai, Chin | pck |
-| Lai Siangtho (Sizang) | Sizang, Zolai, Chin, Siyin | csy |
-| Lai Siangtho (Tedim) | Tedim, Zolai, Chin | ctd |
-| Khazopa Chabu Pathaipa (Mara) | Mara, Chin | mrh |
-| Matu Bible (Matu) | Matu, Chin | hlt |
-| Lai Siengthou (Zbi) | Zo, Zou, Chin | zom |
-| Zo Bible (Zbm) | Zo, Zou, Chin | zom |
-| Pathen Thutheng BU (Thadou) | Thadou, Kuki, Chin | tcz |
-| သမ္မာကျမ်း (ယုဒသန်) | Myanmar | mya |
-| သမ္မာကျမ်း (မြန်​​​မာ့​​​စံ​​​မီ​​​) | Myanmar | mya |
-| သမ္မာကျမ်း (ခေတ်သုံး) | Myanmar | mya |
-| ကမ္ဘာသစ်ဘာသာပြန်ကျမ်း (နေ့စဉ်သုံး) | Myanmar | mya |
-| Jinghpaw Common Language (JCLB) | Jinghpaw, Kachin | kac |
-| Jinghpaw Hanson Version Bible (JHVB) | Jinghpaw, Kachin | kac |
-| New International Version (NIV) | English | eng |
-| King James Version (KJV) | English | eng |
-| Bible in Basic English (BBE) | English | eng |
-| World English Bible (WEB) | English | eng |
-| American Standard Version (ASV) | English | eng |
-| Berean Standard Bible (BSB) | English | eng |
-| Contemporary English Version (CEV) | English | eng |
-| Common English Bible (CEB) | English | eng |
-| Contemporary English Version Interconfessional Edition (CEVDCI) | English | eng |
-| Contemporary English Version (Anglicised) (CEVUK) | English | eng |
-| Complete Jewish Bible (CJB) | English | eng |
-| Catholic Public Domain Version (CJB) | English | eng |
-| Christian Standard Bible (CSB) | English | eng |
-| Plain English Version (Aboriginal) (PEV) | English | eng |
-| Darby's Translation (DARBY) | English | eng |
-| EasyEnglish Bible (EASY) | English | eng |
-| English Standard Version (EASY) | English | eng |
-| Holman Christian Standard Bible (HCSB) | English | eng |
-| Good News Bible (Anglicised) (GNBDC) | English | eng |
-| Good News Translation (GNT) | English | eng |
-| Lexham English Bible (LEB) | English | eng |
-| Det Danske Bibel (Danske) | Danish | dan |
-| Det Norsk Bibelselskap 1930 (Norske) | Norwegian/Bokmål | nob |
-| Norsk Bibel (Norske) | Norwegian/Bokmål | nob |
-| Swedish Contemporary Bible (Swedish) | Swedish | swe |
-| Kirkkoraamattu 1933/38 (Finnish) | Finnish | fin |
-| La Bible Ostervald (French) | French | fra |
-| Luther Bible (German) | German | deu |
-| リビングバイブル (jcb) | Japanese | jpn |
-| Colloquial Japanese (JACJ) | Japanese | jpn |
-| Thai KJV (KJV) | Thai | tha |
-| पवित्र बाइबिल OV (HINOVBSI) | Hindi | hin |
-| सरल हिन्दी बाइबल (HCV) | Hindi | hin |
-| 현대인의 성경 (KLB) | Korean | kor |
-| 개역한글 (KRV) | Korean | kor |
-| 当代译本 (CCB) | Chinese (Simplified) | zho |
-| 新译本（简体字版） (CNVS) | Chinese (Simplified) | zho |
-| Tagalog Contemporary Bible (ASND) | Tagalog | tgl |
-> Books: 56 langs: 25
+| Name | Year | Language | ISO |
+| --- | --- | --- | --- |
+| Baibal Thianghlim (Falam) | 1973 | Falam, Lai, Chin | cfm |
+| Baibal Thiang (Hakha) | 1920 | Hakha, Lai, Chin | cnh |
+| Pathian Lehkhabu Thianghlim (Mizo) | 1917 | Mizo, Lushai, Chin | lus |
+| Common Language Bible (Mizo) | 1995 | Mizo, Lushai | lus |
+| Paite Bible (Paite) | 1971 | Paite, Zolai, Chin | pck |
+| Lai Siangtho (Sizang) | 1932 | Sizang, Zolai, Chin, Siyin | csy |
+| Lai Siangtho (Tedim) | 1932 | Tedim, Zolai, Chin | ctd |
+| Lai Siangtho (Tedim) | 1977 | Tedim, Zolai, Chin | ctd |
+| Khazopa Chabu Pathaipa (Mara) | 2011 | Mara, Chin | mrh |
+| Matu Bible (Matu) | 2009 | Matu, Chin | hlt |
+| Lai Siengthou (Zbi) | 1992 | Zo, Zou, Chin | zom |
+| Zo Bible (Zbm) | 2018 | Zo, Zou, Chin | zom |
+| Pathen Thutheng BU (Thadou) | 2015 | Thadou, Kuki, Chin | tcz |
+| သမ္မာကျမ်း (ယုဒသန်) | 1835 | Myanmar | mya |
+| သမ္မာကျမ်း (မြန်မာ့စံမီ) | 2005 | Myanmar | mya |
+| သမ္မာကျမ်း (ခေတ်သုံး) | 2005 | Myanmar | mya |
+| ကမ္ဘာသစ်ဘာသာပြန်ကျမ်း (နေ့စဉ်သုံး) | 2010 | Myanmar | mya |
+| Jinghpaw Common Language (JCLB) | 2009 | Jinghpaw, Kachin | kac |
+| Jinghpaw Hanson Version Bible (JHVB) | 2009 | Jinghpaw, Kachin | kac |
+| New International Version (NIV) | 2011 | English | eng |
+| King James Version (KJV) | 1611 | English | eng |
+| Bible in Basic English (BBE) | 1949 | English | eng |
+| World English Bible (WEB) | 2000 | English | eng |
+| American Standard Version (ASV) | 1901 | English | eng |
+| Berean Standard Bible (BSB) | 2016 | English | eng |
+| Contemporary English Version (CEV) | 2006 | English | eng |
+| Common English Bible (CEB) | 2011 | English | eng |
+| Contemporary English Version Interconfessional Edition (CEVDCI) | 2006 | English | eng |
+| Contemporary English Version (Anglicised) (CEVUK) | 2012 | English | eng |
+| Complete Jewish Bible (CJB) | 1998 | English | eng |
+| Catholic Public Domain Version (CJB) | 2009 | English | eng |
+| Christian Standard Bible (CSB) | 2017 | English | eng |
+| Plain English Version (Aboriginal) (PEV) | 2021 | English | eng |
+| Darby's Translation (DARBY) | 1890 | English | eng |
+| EasyEnglish Bible (EASY) | 2018 | English | eng |
+| English Standard Version (EASY) | 2016 | English | eng |
+| Holman Christian Standard Bible (HCSB) | 1999 | English | eng |
+| Good News Bible (Anglicised) (GNBDC) | 1992 | English | eng |
+| Good News Translation (GNT) | 1992 | English | eng |
+| Lexham English Bible (LEB) | 2010 | English | eng |
+| Det Danske Bibel (Danske) | 1931 | Danish | dan |
+| Det Norsk Bibelselskap 1930 (Norske) | 1930 | Norwegian/Bokmål | nob |
+| Norsk Bibel (Norske) | 1930 | Norwegian/Bokmål | nob |
+| Swedish Contemporary Bible (Swedish) | 2015 | Swedish | swe |
+| Kirkkoraamattu 1933/38 (Finnish) | 1933 | Finnish | fin |
+| La Bible Ostervald (French) | 1877 | French | fra |
+| Luther Bible (German) | 1912 | German | deu |
+| リビングバイブル (jcb) | 1978 | Japanese | jpn |
+| Colloquial Japanese (JACJ) | 1955 | Japanese | jpn |
+| Thai KJV (KJV) | 1611 | Thai | tha |
+| पवित्र बाइबिल OV (HINOVBSI) | 2012 | Hindi | hin |
+| सरल हिन्दी बाइबल (HCV) | 2019 | Hindi | hin |
+| 현대인의 성경 (KLB) | 1985 | Korean | kor |
+| 개역한글 (KRV) | 1961 | Korean | kor |
+| 当代译本 (CCB) | 1979 | Chinese (Simplified) | zho |
+| 新译本（简体字版） (CNVS) | 1976 | Chinese (Simplified) | zho |
+| Tagalog Contemporary Bible (ASND) | 1976 | Tagalog | tgl |
+> Books: 57 langs: 25
 
 ## task
 

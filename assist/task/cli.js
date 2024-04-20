@@ -110,8 +110,8 @@ async function doSee(name) {
  */
 async function doExport(name) {
   switch (name) {
-    case "words":
-      return (await import("./scan.js")).doExport;
+    case "bible":
+      return (await import("./export.js")).doExport;
     default:
       return noName;
   }

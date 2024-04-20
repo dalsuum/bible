@@ -103,6 +103,7 @@ export async function doRead(req) {
  * node run task wbc scan --id=368
  * node run task wbc scan --id=1812 nonDoc=none
  * node run task wbc scan --id=463 nonDoc=none
+ * node run task wbc scan --id=3561 nonDoc=none
  * 120
  * @param {any} req
  */
@@ -142,6 +143,9 @@ export async function doScan(req) {
     return "no identify";
   }
 
+  if (!bible.info) {
+    bible.info = {};
+  }
   if (!bible.book) {
     bible.book = {};
   }
@@ -225,15 +229,25 @@ export async function doScan(req) {
                 if (!bible.book[bookId]) {
                   bible.book[bookId] = {};
                 }
-                const description = bible.book[bookId].info.desc;
+                // let description = "";
+                // if (bible.book[bookId].info){
+                //   if (bible.book[bookId].info.desc){
+                //     description = bible.book[bookId].info.desc;
+                //   }
+                // }
                 // res.book[bookId].info = bible.book[bookId].info;
+                // bible.book[bookId].info = Object.assign(
+                //   {},
+                //   bible.book[bookId].info,
+                //   lang.book[bookId].info,{ desc:description}
+                // );
                 bible.book[bookId].info = Object.assign(
                   {},
-                  bible.book[bookId].info,
-                  lang.book[bookId].info
+                  lang.book[bookId].info,
+                  bible.book[bookId].info
                 );
 
-                bible.book[bookId].info.desc = description;
+                // bible.book[bookId].info.desc = description;
               }
             }
           } else {
@@ -249,7 +263,8 @@ export async function doScan(req) {
           bible.info.identify = identify;
 
           let docFilePath = root.fileDoc(identify);
-          await root.base.writeJSON(docFilePath, bible);
+          // let docFilePath = 'tmp/test-export.json';
+          await root.base.writeJSON(docFilePath, bible, 2);
           console.info("> replaced JSON at", docFilePath);
         }
       }

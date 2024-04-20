@@ -188,7 +188,7 @@ export function fileLang() {
     .replace("?", taskId)
     .replace("scanId", scanId)
     .replace("bN.cN", "lang")
-    .replace(".ext", "json");
+    .replace(".ext", ".json");
 }
 
 /**
