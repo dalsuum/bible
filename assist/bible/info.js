@@ -8,7 +8,7 @@ const listOfBible = env.listOfBible;
 
 /**
  * @example
- * note run bible info
+ * node run bible info
  * @param {any} req - {query:{identify?:string, timeout?:number}}
  */
 export default async function doDefault(req) {
@@ -23,15 +23,16 @@ export default async function doDefault(req) {
 function listOfBibleMarkDown() {
   const totalBible = listOfBible.book.length;
 
-  console.log("|", "Name", "|", "Language", "|", "ISO", "|");
-  console.log("|", "---", "|", "---", "|", "---", "|");
+  console.log("|", "Name", "|", "Year", "|", "Language", "|", "ISO", "|");
+  console.log("|", "---", "|", "---", "|", "---", "|", "---", "|");
   for (let index = 0; index < totalBible; index++) {
     const book = listOfBible.book[index];
 
     let name = "? (*)".replace("?", book.name).replace("*", book.shortname);
+    let year = book.year;
     let lang = book.language.text;
     let iso = book.language.name;
-    console.log("|", name, "|", lang, "|", iso, "|");
+    console.log("|", name, "|", year, "|", lang, "|", iso, "|");
   }
 
   const langDump = listOfBible.book.map((e) => e.language.name);
