@@ -1,6 +1,6 @@
 {
   "name": "Lai Siangtho",
-  "updated": "2024-03-23T09:35:15.343Z",
+  "updated": "2024-04-20T09:33:32.536Z",
   "version": 260,
   "book": [
     {
@@ -111,6 +111,22 @@
       },
       "version": 3,
       "description": "Tedim (Chin) Bible, Tedim Common Language Bible",
+      "publisher": "Bible Society of Myanmar",
+      "contributors": "",
+      "copyright": ""
+    },
+    {
+      "identify": "3561",
+      "name": "Lai Siangtho",
+      "shortname": "Tedim",
+      "year": "1977",
+      "language": {
+        "text": "Tedim, Zolai, Chin",
+        "textdirection": "ltr",
+        "name": "ctd"
+      },
+      "version": 1,
+      "description": "Tedim Lai Siangtho 1977",
       "publisher": "Bible Society of Myanmar",
       "contributors": "",
       "copyright": ""
