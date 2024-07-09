@@ -25,6 +25,8 @@ Piancilna 1
 
 ### Known issues
 
+Piancilna 7:1-4
+
 ကမ္ဘာဦး ၁
 ၈: မိုးမျက်နှာကြက်ကို``မိုးကောင်းကင်'' ဟုခေါ် တွင်စေတော်မူ၏။ ညဦးမှနံနက်အထိဒုတိယ နေ့ရက်ဖြစ်လေ၏။
 
@@ -33,3 +35,6 @@ Første Mosebog 1
 
 1 Mosebok 1
 3: Da sa Gud: Det bli lys! Og det blev lys.
+
+Genesis 1
+3: God said, ‘There will be light!’ And there was light.
