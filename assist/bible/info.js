@@ -38,5 +38,5 @@ function listOfBibleMarkDown() {
   const langDump = listOfBible.book.map((e) => e.language.name);
   let langList = [...new Set(langDump)];
 
-  console.log("> Books:", totalBible, "langs:", langList.length);
+  console.log("\n> Books:", totalBible, "langs:", langList.length);
 }
