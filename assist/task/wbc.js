@@ -103,7 +103,7 @@ export async function doRead(req) {
  * node run task wbc scan --id=368
  * node run task wbc scan --id=1812 nonDoc=none
  * node run task wbc scan --id=463 nonDoc=none
- * node run task wbc scan --id=3561 nonDoc=none
+ * node run task wbc scan --id=3561 nonDoc=none space=0
  * 120
  * @param {any} req
  */
@@ -272,8 +272,10 @@ export async function doScan(req) {
   }
 
   let fruitFileName = root.fileFruit();
+  // req.query.space?Number(req.query.space):2
+
   // NOTE: write each book
-  await root.base.writeJSON(fruitFileName, bible, 2);
+  await root.base.writeJSON(fruitFileName, bible, req.query.space?Number(req.query.space):2);
   // NOTE: update setting
   await root.settingWrite();
   console.info(" > write:", fruitFileName);
