@@ -1,6 +1,6 @@
 {
   "name": "Lai Siangtho",
-  "updated": "2024-04-20T09:33:32.536Z",
+  "updated": "2024-11-18T15:04:44.891Z",
   "version": 260,
   "book": [
     {
@@ -803,6 +803,22 @@
       "copyright": "Copyright 2003 Philip Pope CC BY-NC-ND"
     },
     {
+      "identify": "174",
+      "name": "Thai Standard Version Revision (Digital)",
+      "shortname": "THSVD",
+      "year": "2011",
+      "language": {
+        "text": "Thai",
+        "textdirection": "ltr",
+        "name": "tha"
+      },
+      "version": 0,
+      "description": "Thailand Bible Society",
+      "publisher": "thaibible.or.th",
+      "contributors": "",
+      "copyright": "Thai Standard Version 2011 Copyright © 2011 Thailand Bible Society"
+    },
+    {
       "identify": "1683",
       "name": "पवित्र बाइबिल OV",
       "shortname": "HINOVBSI",
@@ -913,6 +929,86 @@
       "publisher": "Biblica, Inc",
       "contributors": "",
       "copyright": "Ang Salita ng Dios (Tagalog Contemporary Bible)"
+    },
+    {
+      "identify": "339",
+      "name": "Tamil Old Version Bible (BSI)",
+      "shortname": "TAOVBSI",
+      "year": "1957",
+      "language": {
+        "text": "தமிழ்",
+        "textdirection": "ltr",
+        "name": "tam"
+      },
+      "version": 0,
+      "description": "பரிசுத்த வேதாகமம் O.V. (BSI)",
+      "publisher": "Bible Society of India",
+      "contributors": "",
+      "copyright": "Tamil O.V. Bible - பரிசுத்த வேதாகமம் O.V.  Copyright © 2017 by The Bible Society of India Used by permission. All rights reserved worldwide."
+    },
+    {
+      "identify": "1899",
+      "name": "இண்டியன் ரிவைஸ்டு வெர்ஸன் (IRV) - தமிழ்",
+      "shortname": "IRVTam",
+      "year": "2019",
+      "language": {
+        "text": "தமிழ்",
+        "textdirection": "ltr",
+        "name": "tam"
+      },
+      "version": 0,
+      "description": "Indian Revised Version (IRV) Tamil - 2019",
+      "publisher": "Bridge Connectivity Solutions Pvt. Ltd.",
+      "contributors": "",
+      "copyright": "TAM-IRV Creative Commons License Indian Revised Version (IRV) - Tamil (இந்தியன் ரீவைஸ்டு வேர்ஷன் - தமிழ்), 2019 by Bridge Connectivity Solutions Pvt. Ltd. is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. This resource is published originally on VachanOnline, a premier Scripture Engagement digital platform for Indian and South Asian Languages and made available to users via vachanonline.com website and the companion VachanGo mobile app."
+    },
+    {
+      "identify": "89",
+      "name": "La Biblia de las Américas",
+      "shortname": "LBLA",
+      "year": "1986",
+      "language": {
+        "text": "Spanish",
+        "textdirection": "ltr",
+        "name": "spa"
+      },
+      "version": 0,
+      "description": "1986, 1995, 1997 by The Lockman Foundation",
+      "publisher": "The Lockman Foundation",
+      "contributors": "",
+      "copyright": "Completed in 1986 by a team of Latin American evangelical Bible scholars, La Biblia de las Américas (LBLA) is an original work translated from the Hebrew-Aramaic and Greek directly into modern Spanish. LBLA presents the Word of God in a clear and flowing style while maintaining accuracy. Following the same principles of translation set for the NASB, La Biblia de las Américas is understandable to the general public and also suitable for serious study, preaching, and daily reading."
+    },
+    {
+      "identify": "2220",
+      "name": "Tanach and Delitzsch's Hebrew New Testament",
+      "shortname": "HebBDHNT",
+      "year": "2018",
+      "language": {
+        "text": "Hebrew",
+        "textdirection": "rtl",
+        "name": "heb"
+      },
+      "version": 0,
+      "description": "תנ\"ך וברית חדשה בתרגום דליטש",
+      "publisher": "Bible Society in Israel",
+      "contributors": "",
+      "copyright": "Tanach and Delitzsch's Hebrew New Testament © Bible Society in Israel, 2018. כל הזכויות שמורות לחברה לכתבי הקודש בישראל"
+    },
+    {
+      "identify": "2221",
+      "name": "Tanach and Modern Hebrew New Testament",
+      "shortname": "HebBMHNT",
+      "year": "2018",
+      "language": {
+        "text": "Hebrew",
+        "textdirection": "rtl",
+        "name": "heb"
+      },
+      "version": 0,
+      "description": "תנ\"ך וברית חדשה בתרגום מודני",
+      "publisher": "Bible Society in Israel",
+      "contributors": "",
+      "copyright": "Copyright 2018 © All Rights Reserved The Bible Society in Israel Jerusalem, Israel. כל הזכויות שמורות לחברה לכתבי הקודש בישראל"
     }
   ],
   "collection": {

@@ -186,6 +186,12 @@
       }
     },
     {
+      "id": "174",
+      "ext": "THSV11",
+      "identify": "174",
+      "note": {}
+    },
+    {
       "id": "51",
       "ext": "DELUT",
       "identify": "luther1912",
@@ -479,7 +485,7 @@
     },
     {
       "id": 1069,
-      "ext": "kud",
+      "ext": "KUD",
       "identify": 1069,
       "note": {}
     },
@@ -491,8 +497,38 @@
     },
     {
       "id": 1015,
-      "ext": "aau",
+      "ext": "AAU",
       "identify": 1015,
+      "note": {}
+    },
+    {
+      "id": 339,
+      "ext": "TAOVBSI",
+      "identify": 339,
+      "note": {}
+    },
+    {
+      "id": 1899,
+      "ext": "IRVTAM",
+      "identify": 1899,
+      "note": {}
+    },
+    {
+      "id": 89,
+      "ext": "LBLA",
+      "identify": 89,
+      "note": {}
+    },
+    {
+      "id": 2220,
+      "ext": "HebBDHNT",
+      "identify": 2220,
+      "note": {}
+    },
+    {
+      "id": 2221,
+      "ext": "HebBMHNT",
+      "identify": 2221,
       "note": {}
     }
   ],
@@ -538,6 +574,24 @@
           "book": "JHN",
           "chapters": [
             "60"
+          ]
+        }
+      ]
+    },
+    {
+      "identify": "3411",
+      "books": [
+        {
+          "book": "DAN",
+          "chapters": [
+            "13",
+            "14"
+          ]
+        },
+        {
+          "book": "JOL",
+          "chapters": [
+            "4"
           ]
         }
       ]

@@ -65,7 +65,7 @@ haven`t, doesn`t
 | Plain English Version (Aboriginal) (PEV) | 2021 | English | eng |
 | Darby's Translation (DARBY) | 1890 | English | eng |
 | EasyEnglish Bible (EASY) | 2018 | English | eng |
-| English Standard Version (EASY) | 2016 | English | eng |
+| English Standard Version (ESV) | 2016 | English | eng |
 | Holman Christian Standard Bible (HCSB) | 1999 | English | eng |
 | Good News Bible (Anglicised) (GNBDC) | 1992 | English | eng |
 | Good News Translation (GNT) | 1992 | English | eng |
@@ -80,6 +80,7 @@ haven`t, doesn`t
 | リビングバイブル (jcb) | 1978 | Japanese | jpn |
 | Colloquial Japanese (JACJ) | 1955 | Japanese | jpn |
 | Thai KJV (KJV) | 1611 | Thai | tha |
+| Thai Standard Version Revision (Digital) (THSVD) | 2011 | Thai | tha |
 | पवित्र बाइबिल OV (HINOVBSI) | 2012 | Hindi | hin |
 | सरल हिन्दी बाइबल (HCV) | 2019 | Hindi | hin |
 | 현대인의 성경 (KLB) | 1985 | Korean | kor |
@@ -87,7 +88,13 @@ haven`t, doesn`t
 | 当代译本 (CCB) | 1979 | Chinese (Simplified) | zho |
 | 新译本（简体字版） (CNVS) | 1976 | Chinese (Simplified) | zho |
 | Tagalog Contemporary Bible (ASND) | 1976 | Tagalog | tgl |
-> Books: 57 langs: 25
+| Tamil Old Version Bible (BSI) (TAOVBSI) | 1957 | தமிழ் | tam |
+| இண்டியன் ரிவைஸ்டு வெர்ஸன் (IRV) - தமிழ் (IRVTam) | 2019 | தமிழ் | tam |
+| La Biblia de las Américas (LBLA) | 1986 | Spanish | spa |
+| Tanach and Delitzsch's Hebrew New Testament (HebBDHNT) | 2018 | Hebrew | heb |
+| Tanach and Modern Hebrew New Testament (HebBMHNT) | 2018 | Hebrew | heb |
+
+> Books: 63 langs: 28
 
 ## task
 
