@@ -275,7 +275,11 @@ export async function doScan(req) {
   // req.query.space?Number(req.query.space):2
 
   // NOTE: write each book
-  await root.base.writeJSON(fruitFileName, bible, req.query.space?Number(req.query.space):2);
+  await root.base.writeJSON(
+    fruitFileName,
+    bible,
+    req.query.space ? Number(req.query.space) : 2
+  );
   // NOTE: update setting
   await root.settingWrite();
   console.info(" > write:", fruitFileName);
@@ -522,6 +526,73 @@ export async function doSkip(req) {
   await root.settingWrite();
 
   return "doSkip";
+}
+
+/**
+ * Reset to default structure of selected identify, all necessaries key are inputed but verses will be removed.
+ * bible info is collected from book.json if available, if not use current
+ * testamentName & bookName are collected from ~lang/iso-?.json
+ * Caution: to run this command
+ * @example
+ * node run task wbc reset --id=0
+ * @param {any} req
+ */
+export async function doReset(req) {
+  if (req.query.id) {
+    root.task.current = root.findTask(req.query.id);
+  }
+  const identify = root.task.scanId;
+
+  if (!identify) {
+    return "no identify";
+  }
+  let docFilePath = root.fileDoc(identify);
+
+  /**
+   * @type {root.base.env.TypeOfBible}
+   */
+  let bible = env.structure;
+  bible.note = {};
+  bible.story = {};
+
+  const bibleOld = await root.base.readJSON(docFilePath, bible);
+
+  bible.info = bibleOld.info;
+
+  if (bibleOld.note){
+    bible.note = bibleOld.note;
+  }
+  if (bibleOld.story){
+    bible.story = bibleOld.story;
+  }
+
+  // NOTE: Info from book.json
+  const srcInfo = env.listOfBible.book.find(e=> e.identify == identify);
+
+  if (srcInfo){
+    console.log(' > info from book.json is added');
+    bible.info = srcInfo;
+  }
+
+  const isoName = bible.info.language.name;
+  const langFile = env.fileLanguage(isoName);
+
+  const isoFileContent = await root.getLangCurrent(langFile);
+
+  // NOTE: Note does not need to alter or override from iso
+  // bible.note = isoFileContent.note;
+  bible.digit = isoFileContent.digit;
+  bible.language = isoFileContent.language;
+  bible.testament = isoFileContent.testament;
+  // NOTE: Story does not need to alter or override from iso
+  // bible.story = isoFileContent.story;
+  bible.book = isoFileContent.book;
+
+  // NOTE: write current book
+  await root.base.writeJSON(docFilePath, bible, 2);
+
+  let msg = "reset: " + docFilePath;
+  return msg;
 }
 
 /**
