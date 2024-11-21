@@ -86,12 +86,18 @@ async function doWBC(name) {
       return (await import("./wbc.js")).doMapContext;
     case "language":
       return (await import("./wbc.js")).doMapLanguage;
+    case "reset":
+      return (await import("./wbc.js")).doReset;
     default:
       return (await import("./wbc.js")).doDefault;
   }
 }
 
 /**
+ * @example
+ * node run task see io
+ * node run task see khualtawng
+ *
  * @param {string} [name]
  */
 async function doSee(name) {
