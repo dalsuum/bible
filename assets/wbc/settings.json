@@ -548,22 +548,6 @@
       "publisher": "Myanmar Center for World Mission",
       "contributors": "",
       "copyright": ""
-    },
-    {
-      "identify": "13",
-      "name": "الكتاب المقدس",
-      "shortname": "AVD",
-      "year": "1999",
-      "language": {
-        "text": "Arabic (Standard)",
-        "textdirection": "rtl",
-        "name": "arb"
-      },
-      "version": 0,
-      "description": "New Van Dyck Bible (Full Vocalization with Helps). This is the most widely used Arabic translation in the world. It was published by the Bible Society of Egypt in 1999.",
-      "publisher": "Bible Society of Egypt",
-      "contributors": "",
-      "copyright": ""
     }
   ],
   "skip": [
