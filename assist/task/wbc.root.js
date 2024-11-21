@@ -317,7 +317,26 @@ export async function scanCore(identify, bible) {
  */
 export async function scanLang() {
   const langFile = fileLang();
-  const res = await base.readJSON(langFile, {
+
+  const res = await getLangCurrent(langFile);
+
+  let digit = Object.assign({}, category.digit, res.digit);
+  res.digit = Object.values(digit);
+
+  res.language = Object.assign({}, category.language, res.language);
+  res.section = Object.assign({}, category.section, res.section);
+  res.testament = Object.assign({}, category.testament, res.testament);
+  // res.locale = Object.assign({}, category.locale, res.locale);
+
+  return res;
+}
+
+/**
+ * internal: read of lang from lang dir
+ * @param {string} file
+ */
+export async function getLangCurrent(file) {
+  const res = await base.readJSON(file, {
     digit: [],
     language: {},
     section: {},
@@ -335,6 +354,7 @@ export async function scanLang() {
 
   return res;
 }
+
 
 /**
  * internal: read or request of version detail
