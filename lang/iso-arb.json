@@ -1,48 +1,48 @@
 {
   "digit": [
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9"
+    "٠",
+    "١",
+    "٢",
+    "٣",
+    "٤",
+    "٥",
+    "٦",
+    "٧",
+    "٨",
+    "٩"
   ],
   "language": {
-    "bible": "Bible",
-    "book": "Book",
-    "chapter": "Chapter",
-    "verse": "Verse"
+    "bible": "الكتاب المقدس",
+    "book": "كتاب",
+    "chapter": "إصحاح",
+    "verse": "آية"
   },
   "section": {
-    "1": "Law",
-    "2": "History",
-    "3": "Poetry",
-    "4": "Prophecy: Major Prophets",
-    "5": "Prophecy: Minor Prophets",
-    "6": "Gospels",
-    "7": "Historical",
-    "8": "Doctrinal: Gentiles",
-    "9": "Doctrinal: Individuals",
-    "10": "Doctrinal: The Jews",
-    "11": "Doctrinal: General Espitles"
+    "1": "الشريعة",
+    "2": "التاريخ",
+    "3": "الشعر",
+    "4": "النبوءات: الأنبياء الكبار",
+    "5": "النبوءات: الأنبياء الصغار",
+    "6": "الأناجيل",
+    "7": "التاريخية",
+    "8": "العقائدية: للأمم",
+    "9": "العقائدية: للأفراد",
+    "10": "العقائدية: لليهود",
+    "11": "العقائدية: الرسائل العامة"
   },
   "testament": {
     "1": {
       "info": {
-        "name": "Old Testament",
-        "shortname": "OT",
+        "name": "العهد القديم",
+        "shortname": "ع.ق",
         "desc": ""
       },
       "other": {}
     },
     "2": {
       "info": {
-        "name": "New Testament",
-        "shortname": "NT",
+        "name": "العهد الجديد",
+        "shortname": "ع.ج",
         "desc": ""
       },
       "other": {}
