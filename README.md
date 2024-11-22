@@ -88,13 +88,14 @@ haven`t, doesn`t
 | 当代译本 (CCB) | 1979 | Chinese (Simplified) | zho |
 | 新译本（简体字版） (CNVS) | 1976 | Chinese (Simplified) | zho |
 | Tagalog Contemporary Bible (ASND) | 1976 | Tagalog | tgl |
+| الكتاب المقدس (AVD) | 1999 | Arabic (Standard) | arb |
 | Tamil Old Version Bible (BSI) (TAOVBSI) | 1957 | தமிழ் | tam |
 | இண்டியன் ரிவைஸ்டு வெர்ஸன் (IRV) - தமிழ் (IRVTam) | 2019 | தமிழ் | tam |
 | La Biblia de las Américas (LBLA) | 1986 | Spanish | spa |
 | Tanach and Delitzsch's Hebrew New Testament (HebBDHNT) | 2018 | Hebrew | heb |
 | Tanach and Modern Hebrew New Testament (HebBMHNT) | 2018 | Hebrew | heb |
 
-> Books: 63 langs: 28
+> Books: 64 langs: 29
 
 ## task
 
