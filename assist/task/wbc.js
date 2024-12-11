@@ -532,7 +532,7 @@ export async function doSkip(req) {
  * Reset to default structure of selected identify, all necessaries key are inputed but verses will be removed.
  * bible info is collected from book.json if available, if not use current
  * testamentName & bookName are collected from ~lang/iso-?.json
- * Caution: to run this command
+ * Caution: to run this command, make sure a copy is save somewhere
  * @example
  * node run task wbc reset --id=0
  * @param {any} req
