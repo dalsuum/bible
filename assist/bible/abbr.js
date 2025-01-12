@@ -12,9 +12,22 @@ const category = env.category;
  * Abbreviation
  * @example
  * node run bible abbr tedim1932 --q="Gen.1.3;Gen.2.3"
+ * node run bible abbr niv2011 --q="Gen.36:2,14,18,34:2; 2Sa.20:2"
+ * node run bible abbr niv2011 --q="Gen.36:2,14,18,37:2; Gen.21:2"
+ * node run bible abbr niv2011 --q="Gen.36.2,14,18,37.2; Gen.21:2"
  * @param {any} req -
  */
 export default async function doDefault(req) {
+  // /^(\d?[A-Za-z ]+)?\.?\s?(\d+)[.: ](\d+)$/
+
+  // const ref = "1.1.3";
+
+  // var re = /^(\d?[A-Za-z ]+)?\.?\s?(\d+)[.: ](\d+)$/.exec(ref);
+  // console.log(re);
+  return working(req);
+}
+
+async function working(req) {
   const identify = req.params.name;
   const selection = req.query.q;
 
@@ -34,7 +47,9 @@ export default async function doDefault(req) {
     return "no selection";
   }
 
-  const reference = env.formatReference(selection);
+  const reference = env.referenceQuery(selection);
+
+  console.log(reference);
 
   if (!reference.length) {
     return "no reference";

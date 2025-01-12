@@ -21,6 +21,10 @@ export default async function main(req) {
     //   return await doLang(req.params.name).then((e) => e(req));
     case "abbr":
       return (await import("./abbr.js")).default(req);
+    case "quiz":
+      return (await import("./quiz.js")).default(req);
+    case "export":
+      return (await import("./export.js")).default(req);
     default:
       return noTask(req);
   }

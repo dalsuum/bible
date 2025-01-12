@@ -10,7 +10,7 @@ const config = env.config;
 /**
  * Testing
  * @example
- * note run bible test
+ * node run bible test
  * @param {any} req
  */
 export default async function doDefault(req) {

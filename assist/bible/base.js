@@ -6,6 +6,14 @@ import { seek } from "lethil";
 export { env } from "../anchor/index.js";
 
 /**
+ * check file
+ */
+export const exists = seek.exists;
+/**
+ * Read file
+ */
+export const read = seek.read;
+/**
  * Read JSON file
  */
 export const readJSON = seek.readJSON;
