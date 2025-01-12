@@ -5,6 +5,7 @@ tmp.*
 /cache
 # *-lock.json
 ecosystem.json
+* - Copy.*
 
 
 # json/

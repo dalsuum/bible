@@ -97,6 +97,77 @@ haven`t, doesn`t
 
 > Books: 64 langs: 29
 
+## Abbreviation
+
+| # | Name | abbr | shortname |
+| --- | --- | --- | --- |
+| 1 | Genesis | Gen | Ge |
+| 2 | Exodus | Exo | Ex |
+| 3 | Leviticus | Lev | Le |
+| 4 | Numbers | Num | Nu |
+| 5 | Deuteronomy | Deu | De |
+| 6 | Joshua | Jos | Js |
+| 7 | Judges | Jdg | Jg |
+| 8 | Ruth | Rut | Ru |
+| 9 | 1 Samuel | 1Sa | 1S |
+| 10 | 2 Samuel | 2Sa | 2S |
+| 11 | 1 Kings | 1Ki | 1K |
+| 12 | 2 Kings | 2Ki | 2K |
+| 13 | 1 Chronicles | 1Ch | 1C |
+| 14 | 2 Chronicles | 2Ch | 2C |
+| 15 | Ezra | Ezr | Ez |
+| 16 | Nehemiah | Neh | Ne |
+| 17 | Esther | Est | Es |
+| 18 | Job | Job | Jb |
+| 19 | Psalm | Psa | Ps |
+| 20 | Proverbs | Pro | Pr |
+| 21 | Ecclesiastes | Ecc | Ec |
+| 22 | Song of Solomon | Sng | So |
+| 23 | Isaiah | Isa | Is |
+| 24 | Jeremiah | Jer | Je |
+| 25 | Lamentations | Lam | La |
+| 26 | Ezekiel | Ezk | Ek |
+| 27 | Daniel | Dan | Da |
+| 28 | Hosea | Hos | Ho |
+| 29 | Joel | Jol | Jl |
+| 30 | Amos | Amo | Am |
+| 31 | Obadiah | Oba | Ob |
+| 32 | Jonah | Jon | Jh |
+| 33 | Micah | Mic | Mi |
+| 34 | Nahum | Nam | Na |
+| 35 | Habakkuk | Hab | Hb |
+| 36 | Zephaniah | Zep | Zp |
+| 37 | Haggai | Hag | Ha |
+| 38 | Zechariah | Zec | Zc |
+| 39 | Malachi | Mal | Ml |
+| 40 | Matthew | Mat | Mt |
+| 41 | Mark | Mrk | Mk |
+| 42 | Luke | Luk | Lk |
+| 43 | John | Jhn | Jn |
+| 44 | Acts | Act | Ac |
+| 45 | Romans | Rom | Ro |
+| 46 | 1 Corinthians | 1Co | C1 |
+| 47 | 2 Corinthians | 2Co | C2 |
+| 48 | Galatians | Gal | Ga |
+| 49 | Ephesians | Eph | Ep |
+| 50 | Philippians | Php | Pp |
+| 51 | Colossians | Col | Co |
+| 52 | 1 Thessalonians | 1Th | 1H |
+| 53 | 2 Thessalonians | 2Th | 2H |
+| 54 | 1 Timothy | 1Ti | 1T |
+| 55 | 2 Timothy | 2Ti | 2T |
+| 56 | Titus | Tit | Ti |
+| 57 | Philemon | Phm | Pm |
+| 58 | Hebrews | Heb | He |
+| 59 | James | Jas | Jm |
+| 60 | 1 Peter | 1Pe | 1P |
+| 61 | 2 Peter | 2Pe | 2P |
+| 62 | 1 John | 1Jn | 1J |
+| 63 | 2 John | 2Jn | 2J |
+| 64 | 3 John | 3Jn | 3J |
+| 65 | Jude | Jud | Jd |
+| 66 | Revelation | Rev | Re |
+
 ## task
 
 - taskIdentify: `task`, `bible`,

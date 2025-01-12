@@ -98,5 +98,23 @@
         }
       }
     }
+  },
+  "quizzes": {
+    "rule": {
+      "name": "q: question, a: answer, c:categories, t:tag, r:reference, n: note, d: description",
+      "source":["Quizzle","4000 Questions"],
+      "type":"",
+      "reference":"",
+      "tag":["old testament", "new testament","gospels","miracles","kings","judges","prophets","exodus"],
+      "note":"2 Samuel 5:4 -> 2sa.5:4; 2sa 5:4; gen 1:6-7"
+    },
+    "topic": [
+      {
+        "q": "How old (years) was David when he was anointed King of Israel?",
+        "a": 30,
+        "t": [0,4,5],
+        "reference": "2sa.5:4"
+      }
+    ]
   }
 }

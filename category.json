@@ -790,7 +790,8 @@
         "shortname": "Ezr",
         "abbr": [
           "Ezr",
-          "Ezra"
+          "Ezra",
+          "Ez"
         ],
         "desc": ""
       },
@@ -882,6 +883,7 @@
         "name": "Job",
         "shortname": "Job",
         "abbr": [
+          "Job",
           "Job",
           "Jb"
         ],
@@ -2102,6 +2104,7 @@
         "abbr": [
           "1Co",
           "1 Corinthians",
+          "C1",
           "1 Cor",
           "1Cor",
           "ICo",
@@ -2144,6 +2147,7 @@
         "abbr": [
           "2Co",
           "2 Corinthians",
+          "C2",
           "2 Cor",
           "2Cor",
           "IICo",
@@ -2290,6 +2294,7 @@
         "abbr": [
           "1Th",
           "1 Thessalonians",
+          "1H",
           "1 Thess",
           "1 Thes",
           "1Thess",
@@ -2326,6 +2331,7 @@
         "abbr": [
           "2Th",
           "2 Thessalonians",
+          "2H",
           "2 Thess",
           "2Thess",
           "IITh",
@@ -2360,6 +2366,7 @@
         "abbr": [
           "1Ti",
           "1 Timothy",
+          "1T",
           "1 Tim",
           "1Tim",
           "1 Ti",
@@ -2392,6 +2399,7 @@
         "abbr": [
           "2Ti",
           "2 Timothy",
+          "2T",
           "2 Tim",
           "2Tim",
           "2 Ti",
@@ -2679,7 +2687,8 @@
         "shortname": "Jud",
         "abbr": [
           "Jud",
-          "Jude"
+          "Jude",
+          "Jd"
         ],
         "desc": ""
       },
