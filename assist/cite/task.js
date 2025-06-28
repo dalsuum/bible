@@ -25,11 +25,11 @@ export default async function doDefault(req) {
     case "check":
       return checkWords(req);
     case "name":
-      return nameWords(req);
+      return taskWords(req);
     case "snap":
-      return nounSnap(req);
+      return taskSnap(req);
     case "paring":
-      return nameParings(req);
+      return taskParings(req);
     default:
       return noTask(req);
   }
@@ -67,40 +67,72 @@ async function csvWords(req) {
 }
 
 /**
- * Format flat file to JSON
+ * Format flat file to JSON, while counting categorize
  * @example
  * node run cite task check
  * @param {any} req
  */
 async function checkWords(req) {
-  const resFile = env.citeFileName
-    .replace("cite", "tmp")
-    .replace(".tsv", "-testing.json");
+  // NOTE: which will replace `cite`
+  const outputPath = "tmp/cite-check";
+  const resFile = env.citeFileName.replace("cite", outputPath);
+  const resFileCount = resFile.replace("dev-main", "check-overall-counter");
 
-  const res = await base.cite();
-  // res.sort((a, b) => a.ord - b.ord);
-  res.sort((a, b) => a.ord.localeCompare(b.ord));
+  const cCa = env.citeConfiguration.asset;
 
-  const groupByTypes = base.groupBy(res, (e) => e.t);
+  let countCite = 0;
+  const dtl = ["# Testing with (check)", "# Categorizing POS and rows count"];
 
-  const currentTypeList = groupByTypes.keys();
+  for (let index = 0; index < cCa.length; index++) {
+    const i = cCa[index];
+    for (let index = 0; index < i.val.length; index++) {
+      const n = i.val[index];
+      const srcFile = env.citeFileName.replace("dev", i.id).replace("main", n);
 
-  for (const pos of currentTypeList) {
-    // console.log(pos);
-    const currentType = groupByTypes.get(pos);
-    const total = currentType.length;
-    if (pos == "phrase;on the land/on earth") {
-      console.log("???", currentType);
+      const raw = await base.citation(srcFile);
+
+      if (raw.cite.length) {
+        const res = raw.cite;
+        // res.sort((a, b) => a.ord - b.ord);
+        res.sort((a, b) => a.ord.localeCompare(b.ord));
+
+        const groupByTypes = base.groupBy(res, (e) => e.t);
+
+        const currentTypeList = groupByTypes.keys();
+
+        const resFile = srcFile
+          .replace("cite", outputPath)
+          .replace(".tsv", ".json");
+
+        dtl.push("\n# see " + resFile);
+
+        for (const pos of currentTypeList) {
+          // console.log(pos);
+          const currentType = groupByTypes.get(pos);
+          const total = currentType.length;
+          // if (pos == "phrase;on the land/on earth") {
+          //   console.log("???", currentType);
+          // }
+          // if (pos == "") {
+          //   console.log("?? pos empty", currentType);
+          // }
+
+          var derow = [pos, total];
+          dtl.push(derow.join("\t"));
+
+          countCite += total;
+        }
+
+        await base.writeJSON(resFile, res, 2);
+
+        console.log(" + checked:", res.length, "at:", resFile);
+      }
     }
-    if (pos == "") {
-      console.log("?? pos empty", currentType);
-    }
-    console.log(" ", pos, "->", total);
   }
 
-  await base.writeJSON(resFile, res, 2);
+  await base.write(resFileCount, dtl.join("\n"));
 
-  return "Checked words: " + res.length + ", at: " + resFile;
+  return `total: ${countCite}, see ${resFileCount}`;
 }
 
 /**
@@ -113,7 +145,7 @@ async function checkWords(req) {
  * node run cite task name --model=exclamation
  * @param {any} req
  */
-async function nameWords(req) {
+async function taskWords(req) {
   const model = req.query.model || "plain";
 
   if (!env.citeModel.includes(model)) {
@@ -161,7 +193,7 @@ async function nameWords(req) {
  * node run cite task paring --model=exclamation
  * @param {any} req - {params:{task:string, name:string}, query:{model?:string, state:string}}
  */
-async function nameParings(req) {
+async function taskParings(req) {
   const model = req.query.model || "plain";
   // const state = req.query.state || "uppercase";
   const state = req.query.state || "regular";
@@ -178,8 +210,6 @@ async function nameParings(req) {
   if (!base.exists(srcFile)) {
     return "No such * file found".replace("*", srcFile);
   }
-
-  const nameContent = await base.readJSON(srcFile, { identify: [], word: [] });
 
   const res = [];
 
@@ -200,6 +230,9 @@ async function nameParings(req) {
       }
     }
   }
+
+  const nameContent = await base.readJSON(srcFile, { identify: [], word: [] });
+
   for (let index = 0; index < nameContent.word.length; index++) {
     const ord = nameContent.word[index];
     if (ord) {
@@ -207,12 +240,12 @@ async function nameParings(req) {
         if (base.checkFirstletterIsUppercase(ord)) {
           // if (!raws.find((e) => e.ord == ord)) {
           if (!raws.find((e) => e.ord.toLowerCase() == ord.toLowerCase())) {
-            let tpl = "*=(t:uppercase) (w:*)".replaceAll("*", ord);
+            let tpl = "* = (t:uppercase) (w:*)".replaceAll("*", ord);
             res.push(tpl);
           }
         }
       } else if (!raws.find((e) => e.ord.toLowerCase() == ord.toLowerCase())) {
-        let tpl = "*=(t:todo> (w:*)".replaceAll("*", ord);
+        let tpl = "* = (t:todo) (w:*)".replaceAll("*", ord);
         res.push(tpl);
       }
     }
@@ -239,7 +272,7 @@ async function nameParings(req) {
  * node run cite task snap --type=noun name=kha
  * @param {any} req
  */
-async function nounSnap(req) {
+async function taskSnap(req) {
   const id = req.query.type;
   const name = req.query.name;
 
@@ -250,7 +283,7 @@ async function nounSnap(req) {
     return "Name should be provided.";
   }
 
-  const currentClass = env.citeClass.find((e) => e.id == id);
+  const currentClass = env.citeConfiguration.asset.find((e) => e.id == id);
 
   if (!currentClass) {
     return "Type (id) not found.".replace("id", id);
@@ -287,22 +320,24 @@ async function nounSnap(req) {
   const res = [];
 
   for (let index = 0; index < raw.length; index++) {
-    let oj = base.citeFlatObject(raw[index]);
-    if (oj) {
-      if (oj.t == "?") {
-        // row.t = "(t:!-!)".replace("!", id).replace("!", name);
-        // oj.t = "!-!".replace("!", id).replace("!", name);
-        oj.t = name;
-      }
-      if (!oj.w) {
-        // row.w = "(w:*)".replace("*", row.ord);
-        oj.w = oj.ord;
-      }
-      if (!oj.e) {
-        oj.e = tpl;
-      }
+    let line = raw[index].trim();
+    if (line) {
+      let row = base.citeLine(line);
+      if (row.comment) {
+        res.push(row.comment);
+      } else if (row.cite) {
+        if (row.cite.t == "?") {
+          row.cite.t = name;
+        }
+        if (!row.cite.w) {
+          row.cite.w = row.cite.ord;
+        }
+        if (!row.cite.e) {
+          row.cite.e = tpl;
+        }
 
-      res.push(base.citeFlatString(oj));
+        res.push(base.citeFlatString(row.cite));
+      }
     }
   }
   // const lit = new Set();

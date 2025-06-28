@@ -15,6 +15,11 @@ routes.register("task/:task?/:name?", async function (req) {
 routes.register("bible/:task?/:name?", async function (req) {
   return import("./bible/cli.js").then((e) => e.default(req));
 });
+
 routes.register("cite/:task?/:name?", async function (req) {
   return import("./cite/cli.js").then((e) => e.default(req));
+});
+
+routes.register("pool/:task?/:name?", async function (req) {
+  return import("./pool/cli.js").then((e) => e.default(req));
 });

@@ -147,8 +147,21 @@ import core, { seek, Prompt } from "lethil";
  * @property {string[]} s - synonym
  * @property {string[]} a - antonym
  * @property {string[]} o - origin
- * @param {string} str
+ * param {string} str
  */
+
+/**
+ * @typedef {Object} TypeOfCitation - Citation (cite) types
+ * @property {string[]} comment - comments
+ * @property {TypeOfCite[]} cite - rows of `TypeOfCite`
+ */
+
+/**
+ * @typedef {Object} CiteConfiguration - Cite configuration
+ * @property {{id: string, val: string[]}[]} asset - A class of working files
+ * @property {any} other - Other
+ */
+
 const fileOfBook = "./book.json";
 const fileOfCategory = "./category.json";
 const fileOfStructure = "./structure.json";
@@ -163,7 +176,10 @@ export const citeISOFile = "./cite/word/iso-ord-model.json";
 
 /**
  * Source/working flat file
- * org: ctd-cite.tsv
+ * org: ctd-dev-main.tsv
+ *
+ * @example
+ * focus on [dev, main]
  */
 export const citeFileName = "./cite/ctd-dev-main.tsv";
 /**
@@ -175,9 +191,12 @@ export const citeModel = [
   "apostrophe",
   "exclamation",
   "question",
+  "number",
 ];
 
 /**
+ * Configuration file `./cite/configuration.json`
+ *
  * Cite class, known Nouns
  * model state
  *
@@ -186,17 +205,11 @@ export const citeModel = [
  * ctd-noun-khua.tsv
  * ctd-noun-ni.tsv
  * ctd-noun-kha.tsv
+ *
+ * citeFileClass
+ * @type {CiteConfiguration}
  */
-export const citeClass = [
-  {
-    id: "dev",
-    val: ["main"],
-  },
-  {
-    id: "noun",
-    val: ["beh", "khua", "kha", "ni", "min", "ganhing","test"],
-  },
-];
+export const citeConfiguration = await seek.readJSON('./cite/configuration.json');
 
 /**
  * Template `./structure.json`
@@ -448,12 +461,26 @@ function referenceBookInfo(str) {
   //   console.log('???', 'by book-id',str);
   //   return category.book[str];
   // }
+  // if (isNaN(str)){
+  //   return category.book.find(
+  //     (e) =>
+  //       e.id == str
+  //   );
+  // }
+  // return category.book.find(
+  //   // (e) => e.info.name == str || e.info.abbr.includes(str)
+  //   (e) =>
+  //     e.id == str ||
+  //     e.info.name == str ||
+  //     e.info.abbr.some((x) => x == str)
+  // );
   return category.book.find(
     // (e) => e.info.name == str || e.info.abbr.includes(str)
     (e) =>
       e.id == str ||
       e.info.name == str ||
-      e.info.abbr.some((x) => x.toLowerCase() == str.toLowerCase())
+      // e.info.abbr.some((x) => x.toLowerCase() == str.toLowerCase())
+      e.info.abbr.some((x) => x.match(new RegExp(str, "i")))
   );
 }
 
@@ -580,7 +607,7 @@ export async function getBibleByReference(identify, arg) {
     //   (e) => e.info.name == q.book || e.info.abbr.includes(q.book)
     // );
 
-    let book = referenceBookInfo(q.book);
+    let book = referenceBookInfo(q.bookId || q.book);
 
     if (book) {
       // console.log(book.info.name);
@@ -820,7 +847,7 @@ export async function createLanguage(iso, identify) {
  * Extract each words using `natural`
  * @param {string} identify
  * @param {TypeOfSearchParameter} arg
- * @param {string} model - [plain, dash, apostrophe, question, exclamation]
+ * @param {string} model - [plain, dash, apostrophe, question, exclamation, number]
  * @returns {Promise<{info:TypeOfInfo, ord:string[]}>}
  */
 export async function getBibleWords(identify, arg, model) {
@@ -874,6 +901,8 @@ export async function getBibleWords(identify, arg, model) {
                 verseWords = vWords.filter((str) => /[?]/.test(str));
               } else if (model == "exclamation") {
                 verseWords = vWords.filter((str) => /[!]/.test(str));
+              } else if (model == "number") {
+                verseWords = vWords.filter(str=>!isNaN(str));
               }
             } else {
               verseWords = tokenizer.tokenize(verse.text);
@@ -901,7 +930,7 @@ export async function getBibleWords(identify, arg, model) {
 /**
  * Prompt for questions for testament and book
  * Used in getBibleByKeyword,
- * @returns {Promise<base.env.TypeOfSearchParameter>}
+ * @returns {Promise<TypeOfSearchParameter>}
  */
 export async function getLookupParameter() {
   const prompt = Prompt();

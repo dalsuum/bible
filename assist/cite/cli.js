@@ -13,6 +13,8 @@ export default async function main(req) {
       return (await import("./test.js")).default(req);
     case "task":
       return (await import("./task.js")).default(req);
+    case "search":
+      return (await import("./search.js")).default(req);
     default:
       return noTask(req);
   }

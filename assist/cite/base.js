@@ -41,33 +41,64 @@ export async function flatfile(file, separator = /\r?\n/) {
 
 /**
  * Read flat file to List of object
+ * Parses a flat file, ignoring comment lines unless they match specific conditions.
  * @param {string?} file - default is {@link env.citeFileName}
  * @param {RegExp} separator
- * @returns {Promise<env.TypeOfCite[]>}
+ * returns {Promise<env.TypeOfCite[]>}
+ * @returns {Promise<env.TypeOfCitation>}
  */
-export async function cite(file) {
+export async function citation(file) {
   if (!file) {
     file = env.citeFileName;
   }
 
-  const res = [];
-  // if (!exists(file)) {
-  //   console.log("No such -*- file found".replace("*", file));
-  //   return res;
-  // }
+  /**
+   * @type {env.TypeOfCitation}
+   */
+  const res = {
+    comment: [],
+    cite: [],
+  };
+  if (!exists(file)) {
+    console.log(" - not found", file);
+    return res;
+  }
 
   const raws = await flatfile(file);
 
   for (let index = 0; index < raws.length; index++) {
-    let ob = raws[index];
-    if (ob) {
-      let row = citeFlatObject(ob);
-      if (row) {
-        res.push(row);
+    let line = raws[index].trim();
+    if (line) {
+      let row = citeLine(line);
+      if (row.comment) {
+        res.comment.push(row.comment.replace(/^[#]+/, "").trim());
+      } else if (row.cite) {
+        res.cite.push(row.cite);
       }
     }
   }
 
+  return res;
+}
+
+/**
+ * Check cite Flat file comment or value
+ * @param {string} line
+ * @returns {{comment:string|null, cite:env.TypeOfCite|null}}
+ */
+export function citeLine(line) {
+  const res = {
+    comment: null,
+    line: null,
+  };
+
+  if (line) {
+    if (line.startsWith("#") && !/^#\s*=/.test(line)) {
+      res.comment = line;
+    } else {
+      res.cite = citeFlatObject(line);
+    }
+  }
   return res;
 }
 
@@ -91,7 +122,8 @@ export function citeFlatObject(str) {
     // var res = str.replace(/[\n\r\t]/gm, "").split(/\|(.*)/g);
     var tst = str.replace(/[\n\r]/gm, "").split(/=(.*)/g);
 
-    let ord = tst[0].replace(/\#.*/g, "$'").trim();
+    // let ord = tst[0].replace(/\#.*/g, "$'").trim();
+    let ord = tst[0].trim();
     if (ord == "") {
       return undefined;
     }
@@ -110,7 +142,7 @@ export function citeFlatObject(str) {
       .trim(); // Remove any leading parentheses-based tags
 
     // Extract the key-value pairs
-    const obj = {t:[]};
+    const obj = { t: [] };
     text.replace(paramRegex, (_, key, value) => {
       let val = value.replace(/ +/g, " ").trim(); // double spaces to single / trim
       if (val) {
@@ -118,14 +150,14 @@ export function citeFlatObject(str) {
           obj[key] = [];
         }
         // Push the value into the array
-        obj[key].push(...val.split("/").map(e=>e.trim()));
+        obj[key].push(...val.split("/").map((e) => e.trim()));
       }
 
       return "";
     });
 
-    if (obj.t == ''){
-      obj.t = ['?'];
+    if (obj.t == "") {
+      obj.t = ["?"];
     }
 
     if (ord) {
@@ -152,22 +184,22 @@ export function citeFlatObject(str) {
  * @param {env.TypeOfCite} oj
  * @returns {string}
  */
-export function citeFlatString(oj){
+export function citeFlatString(oj) {
   let str = [];
   for (const [k, val] of Object.entries(oj)) {
-    if (k == 'ord'){
-      str.push(val+' =');
-    } else if (k == 'des'){
+    if (k == "ord") {
+      str.push(val + " =");
+    } else if (k == "des") {
       str.push(val);
     } else {
       let v = val;
-      if (Array.isArray(val)){
-        v =  val.join('/');
+      if (Array.isArray(val)) {
+        v = val.join("/");
       }
       str.push(`(${k}:${v})`);
     }
   }
-  return str.join(' ');
+  return str.join(" ");
 }
 
 /**

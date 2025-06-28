@@ -1,0 +1,8 @@
+# TODO
+
+compose, initial web app
+
+- [ ] cat-tag
+- [ ] consonant-dash
+- [ ] pare-equation (each word)
+- [ ] 

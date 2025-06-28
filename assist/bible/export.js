@@ -58,12 +58,14 @@ export default async function doDefault(req) {
  * node run bible export 3561 --task=words model=apostrophe
  * node run bible export 3561 --task=words model=question
  * node run bible export 3561 --task=words model=exclamation
+ * node run bible export 3561 --task=words model=number
  *
  * node run bible export tedim1932 --task=words model=plain
  * node run bible export tedim1932 --task=words model=dash
  * node run bible export tedim1932 --task=words model=apostrophe
  * node run bible export tedim1932 --task=words model=question
  * node run bible export tedim1932 --task=words model=exclamation
+ * node run bible export tedim1932 --task=words model=number
  *
  * tokenizer = new natural.WordTokenizer();
  *

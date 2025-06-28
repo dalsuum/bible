@@ -7,6 +7,7 @@
  * node run task lang generate
  * node run task see
  * node run task see khualtawng
+ * node run task pools test
 
  */
 export default async function main(req) {
@@ -21,6 +22,8 @@ export default async function main(req) {
       return await doTest(req.params.name).then((e) => e(req));
     case "export":
       return await doExport(req.params.name).then((e) => e(req));
+    case "pools":
+      return await doPools(req.params.name).then((e) => e(req));
     default:
       return noTask(req);
   }
@@ -121,6 +124,12 @@ async function doExport(name) {
     default:
       return noName;
   }
+}
+/**
+ * @param {string} [name]
+ */
+async function doPools(name) {
+  return (await import("./pools.js")).doDefault;
 }
 
 /**

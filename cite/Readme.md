@@ -1,113 +1,5 @@
 # Names
 
-```js
-\(eg.(.*)\)
-<e:$1>
-
-<t:(.*?)>
-(t:$1)
-
-
-\(([a-zA-Z]+):([^()]+)\)
-
-
-\(([a-zA-Z]+):([^()]+)\)
-
-
-\<([a-zA-Z]+):(.*)[^>]+\>
-
-($1:$2)
-
-<(k|s|e|t):.*[^>]+>
-
-($1:$2)
-
-
-    // var res = str.replace(/[\n\r\t]/gm, "").split(/\|(.*)/g);
-    var res = str.replace(/[\n\r]/gm, "").split(/\t(.*)/g);
-
-    let ord = res[0].replace(/\#.*/g, "$'").trim();
-    if (ord == "") {
-      return undefined;
-    }
-    let text = (res[1] || "")
-      .replace(/\[\d+\]/g, "")
-      .trim();
-      // .replace(/~/gm, ord);
-
-    // const descriptionRegex = /<(k|s|e|t):[^>]+>/g;
-
-    const descriptionRegex = /<([twseado]):[^>]+>/g;
-    const des = text.replace(descriptionRegex, "").trim();
-
-    const typeRegex = /<t:([^>]+)>/g;
-    const termRegex = /<w:([^>]+)>/g;
-    const synonymRegex = /<s:([^>]+)>/g;
-    const exampleRegex = /<e:([^>]+)>/g;
-    const antonymRegex = /<a:([^>]+)>/g;
-    const definitionRegex = /<d:([^>]+)>/g;
-    const originRegex = /<o:([^>]+)>/g;
-
-
-
-    let pos = "";
-    text.replace(typeRegex, (_, match) => {
-      pos += (pos ? ";" : "") + match.trim(); // Concatenate matches with ';'
-      return ""; // No replacement needed
-    });
-    const termSet = new Set();
-
-    text.replace(termRegex, (_, match) => {
-      let k = match.split("/");
-      k.forEach((w) => termSet.add(w.trim()));
-      return ""; // No replacement needed
-    });
-
-    const trm = Array.from(termSet);
-
-    const syn = [];
-    text.replace(synonymRegex, (_, match) => {
-      syn.push(match.trim());
-      return ""; // No replacement needed
-    });
-
-
-
-    const egsSet = new Set();
-    text.replace(exampleRegex, (_, match) => {
-      let k = match.split("/");
-      k.forEach((w) => egsSet.add(w.trim()));
-      return ""; // No replacement needed
-    });
-    const egs = Array.from(egsSet);
-
-    const antSet = new Set();
-    text.replace(antonymRegex, (_, match) => {
-      let k = match.split("/");
-      k.forEach((w) => antSet.add(w.trim()));
-      return ""; // No replacement needed
-    });
-    const ant = Array.from(antSet);
-
-    const defSet = new Set();
-    text.replace(definitionRegex, (_, match) => {
-      let k = match.split("/");
-      k.forEach((w) => defSet.add(w.trim()));
-      return ""; // No replacement needed
-    });
-    const def = Array.from(defSet);
-
-    const orgSet = new Set();
-    text.replace(originRegex, (_, match) => {
-      let k = match.split("/");
-      k.forEach((w) => orgSet.add(w.trim()));
-      return ""; // No replacement needed
-    });
-    const org = Array.from(orgSet);
-    
-    return { ord, pos, trm, des, egs, syn, ant, def, org };
-```
-
 Tags
 
 ```JSON
@@ -120,8 +12,6 @@ Tags
   "plant"
 ]
 ```
-
-
 
 - <origin:?/?> - o
 - <description:?> - d
@@ -187,30 +77,11 @@ Abigail <o:> <d:> | <t:feminine> <m:?> mother of Amasa, Sister of David. <r:13.2
         "f": "9.25"
       }
     ]
-  }masculine and feminine
+  }
 ]
 ```
 
-"A",
-"kipat",
-"cil"
-
-ppm postpositional marker to indicate objective case (as in သူ့တွေ့တယ်။).
-part emphatic particle suffixed to words (as in သိပ်ကောင်းတယ်။ပြောပြောရမယ်။သူ့က။စုံမြိုင်ပင်ရိပ်ခန်းမှာ).
-ppm postpositional marker indicating destination. Same as သို့ ppm (as in မန္တလေးသွားမယ်။).
-1v (a) be dumb (as in နားပင်းသော်၊သော်); (b) be dumbfounded (as inတွေ့တွေ့ချင်းနှစ်ဦးစလုံးနေကြပေ-).
-2v be a dud (as in ဒင်္ဂါး-).
-3v be a simpleton (as in ရိုးလွန်းလွန်း-).
-4v (a) be inert; not thrive (as in လုပ်ငန်း-); (b) be denatured; lose potency (as inထုံး-).
-5v be disproportionate; look stodgy (as in ပုံ-).
-6adj dumb (as in လူ).
-7adj dud (as in ကျည်). à
-8part particle prefixed to verbs and adjectives to form nouns or adverbs (as in ပြောဆို၊ညီညွတ်၊မရရ၊ချို့၊ဖြူ).
-9part particle prefixed to numerical classifiers for tens or multiples of tens (as in လူယောက်ငါးဆယ်၊ရာထောင်သောင်း).
-10part particle prefixed to replicated nouns or verbs to convey the idea of profusion (as in မြို့မြို့၊ထပ်ထပ်၊လီလီ).
-11part particle used in combination with nouns for euphonic effect (as in ကလေးဘဝကပင်).
-12part particle prefixed to a component part of some Myanmar names in order to derive a diminutive form (as in ဖြူ, orဝင်းfromဖြူဖြူ
-
+```cmd
 <t:noun/verb> o
 <description:female/male> d
 
@@ -220,13 +91,63 @@ ppm postpositional marker indicating destination. Same as သို့ ppm (as i
 <reference:female/male> r
 <keyword:?/?> k
 <synonym:?/?> s
+```
+
+### Cat-tag
+
+...identify grammatically correction, it's expected for some terms to be identical but processing differ definition, while difference indication at the given structure in sentences.
+
+muhtheih, lawntheih, hihtheih, zaktheih, simtheih,
+uptheih, zuihtheih, zontheih,
+lametna, upna, phawkna, lunggulhna, lungdamna,
+phatna, selphona,
+thu, la, numbet, symbol, phrase,
+lai, pau, kammal,
+tangthu, gentehna, paunak,
+thusim, thupiang, thuthak,
+thuhoih, thusia, thupha,
+hoih, sia, pha, manpha,
+mi, ganhing, singkung, lopa, nahteh,
+ulian, kumcing, naupang, naunget,
+mual, gun, tui, bual, suang, tuipi,
+pasal, numei, nupa, panu, min, beh
+gam, khua, khuapi, khuaneu,
+sak, nip,
+sang, niam,
+lim, aw,
+bawl, sem, lak, pia, ngen, thum,
+nektheih, dawntheih,
+zopna (lai-zom), khupna,
+kamsang, pasian thugen,
+gentehna, ciaptehna, mualsuang,
+lungdam, dah, khasia,
+kampha, kamsia,
+
+eg. gen -> zaktheih,
+
+### Bitexts
+
+A merged document composed of both source- and target-language versions of a given text.
+
+### Corpus
+
+A collection of written texts, especially the entire works of a particular author or a body of writing on a particular subject
 
 ### TODO
 
-- [ ] ki, na, mah, ah, in, ding etc for particle, postpositional marker, determiner needs to be described.
-- [ ] sak: hisak, beisak, hoihsak
-- [ ] end with [in, ah a, pa, nu, mi, ni, te, pi]
-- [ ] end with [sak, pen]
+`ki, na, mah, ah, in, ding` etc for particle, postpositional marker, determiner that are prefix or postfix needed to be described.
+
+- [ ] end with `in, ah a, pa, nu, mi, ni, pi, te, teng`
+  - `pa`: `mipa/hihpa/huapa`
+  - `nu`: `minu/hihnu/huanu`
+  - `mi`: `tuami/hihmi/gammi`
+  - `ni`: `tuni/tuani/nipini`
+  - `pi`: `golpi/haupi/hoihpi`
+  - `te`: `nate/mite/lote/gamte/pasiante`
+  - `teng`: `miteng/loteng/vanteng`
+- [ ] end with `sak, pen`
+  - `sak`: `hisak, beisak, hoihsak`
+- [ ] `ki`~`sak` where adj or verb are quoted with ki and sak
 - [ ] technology
 - [ ] daily
 - [x] beh - `name-beh.tsv`
@@ -251,4 +172,72 @@ Example.
 1. "river" is a common term. When not mentioning the name of the river, we'll simply declare as "noun".
 2. In most cases, "Adam" is a name, and we know that its a person, and preferable the person is masculine. Therefore we'll declare as "person,masculine", and describe what "Adam"  is in the context.
 
+## Citation post
+
+Modify and expand your data rows, accordingly the following markup.
+
+```tsv
+keyword = (t:type) (w:word) (s:term)
+keyword = (t:type) (w:word) (s:term) (e:example) (a:antonym) (d:definition) (o:origin) description
+piansak = (t:v) (w:produce/generate) (s:piangsak)
+```
+
+1. Rows are seperated by line break `\n`
+2. `keyword` must be provided by starting with a new line, if you incase need to provide more descriptions please use `=` after the keyword, following by the makeup rulesets. eg `(t:your-specify-type-name)`  `(w:your-term)` etc.
+   1. description
+   2. t: type
+   3. w: term
+   4. e: example
+   5. s: synonym
+   6. a: antonym
+   7. d: definition
+   8. o: origin
+
+3. To specify `type` using `(t:your-specify-type-name)` markup
+
+The description can also provided without any attributes, but the keyword and description must be seperated by equal sign =.
+
+No no.. the keyword and [description, attributes] must seperated by equal sign, without it the keyword can not contain eg. phrase 
+
+You got it all wrong.
+
+- the keyword and [description, attributes] must seperated by equal sign
+- if equal sign does not contain in the row, it is considered as the row is just keyword.
+
+### Homonym/Homophone/Homograph
+
 ```cmd
+1. ui san - uisan
+```
+
+### Sample
+
+```cmd
+1. an ne khin ta maw? an ne khin maw? an ne ta maw?
+2. annne khinta maw?
+3. an ne khinta maw?
+4. an nekhinta maw?
+
+1. koi ah pai ding?
+2. koi ah paiding
+3. koi ahpai ding
+4. koiah pai ding
+5. koiah paiding
+
+1. lei tang pen pa sian bawl sa a hi hi
+2. leitang pen pasian bawlsa ahihi.
+3. leitang
+
+n v of-past-tense ppm part
+hi maw? tua maw? bang maw?
+
+
+ctd-noun-lst
+
+
+bitexts can markedly increase student reading and comprehension in a second language.  Because the raw volume of text they read jumps so dramatically, students are exposed to a much wider vocabulary Moreover, when text is easier to read, students can begin to understand large-scale features of style and grammar. 
+
+Bitexts have long been a mainstay of second-language education for European languages, and are equally valuable for students of English and Southeast Asian languages.
+
+
+bitext in kammal/laimal dangte simna leh teihna dingin hong kangto sak hi. Tua ahihmanin laigual a simnate hang tampitak khangtosak hi, sangnaupangte pen khangto mahmah uh a, laimalte a sim uh ciangin, amaute laimal  leh grammer gualdang pen theihna leh muhna kihong khia hi.
